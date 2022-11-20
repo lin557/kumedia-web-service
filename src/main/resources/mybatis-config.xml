@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>      
+    <settings>
+        <!-- 打印查询语句 
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+        -->
+        <!-- 数据库null值列也能读取 -->
+        <setting name="callSettersOnNulls" value="true"/>
+        <!-- 全局超时配置，300表示sql执行时间超过5分钟时，报错 -->
+        <setting name="defaultStatementTimeout" value="300" />
+        <!--开启驼峰命名规则自动转换 可以这里开启 或在 application.properties中开启 -->
+        <setting name="mapUnderscoreToCamelCase" value="true" /> 
+        
+    </settings>
+    
+    <!-- 加载Mapper映射文件 -->
+    <mappers>
+        <!-- 空着就行，由spring配置加载 -->
+    </mappers>
+</configuration>

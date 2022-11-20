@@ -1,0 +1,24 @@
+# 这个配置用于调试 优先级高于 /src/main/resources 中的 application.properties
+
+# 全局配置
+global:
+  debug: true
+
+# ----- web服务端口 -----
+server:
+  port: 8088
+  
+gateway:
+  seatbelt:
+    session:
+      timeout: 60
+    token:
+      expires: 28800
+    config:
+      interval: 1
+
+# ----- mysql -----
+spring:
+  datasource:
+    password: 123456
+    url: jdbc:mysql://192.168.0.250:3306/kumedia?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
